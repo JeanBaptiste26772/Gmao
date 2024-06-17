@@ -55,7 +55,7 @@ private void initialize() {
     frame.getContentPane().setLayout(new GridLayout(2, 2, 10, 10)); // Grid layout for 4 buttons
     
     
-    JButton btnAdmin = new JButton("Administrateur Système", new ImageIcon("C:/Users/HP/Desktop/imagesAdmin.png"));
+    JButton btnAdmin = new JButton("Administrateur Système", new ImageIcon(getClass().getResource("/Images/imagesAdmin.png")));
     btnAdmin.setVerticalTextPosition(JButton.BOTTOM);
     btnAdmin.setHorizontalTextPosition(JButton.CENTER);
     btnAdmin.addActionListener(new ActionListener() {
@@ -68,7 +68,7 @@ private void initialize() {
     frame.getContentPane().add(btnAdmin);
     
     
-    JButton btnAgent = new JButton("Opérateur", new ImageIcon("C:/Users/HP/Desktop/Operateur.jpeg"));
+    JButton btnAgent = new JButton("Opérateur", new ImageIcon(getClass().getResource("/Images/Operateur.jpeg")));
     btnAgent.setVerticalTextPosition(JButton.BOTTOM);
     btnAgent.setHorizontalTextPosition(JButton.CENTER);
     btnAgent.addActionListener(new ActionListener() {
@@ -81,7 +81,7 @@ private void initialize() {
     frame.getContentPane().add(btnAgent);
     
  // Button for Responsable
-    JButton btnResponsable = new JButton("Responsable Maintenance", new ImageIcon("C:/Users/HP/Desktop/imagesResponsableMaint.png"));
+    JButton btnResponsable = new JButton("Responsable Maintenance", new ImageIcon(getClass().getResource("/Images/imagesResponsableMaint.png")));
     btnResponsable.setVerticalTextPosition(JButton.BOTTOM);
     btnResponsable.setHorizontalTextPosition(JButton.CENTER);
     btnResponsable.addActionListener(new ActionListener() {
@@ -95,7 +95,7 @@ private void initialize() {
     
     
     // Button for Utilisateur
-    JButton btnUtilisateur = new JButton("Administrateur GMAO", new ImageIcon("C:/Users/HP/Desktop/AdminGMAO.jpeg"));
+    JButton btnUtilisateur = new JButton("Administrateur GMAO", new ImageIcon(getClass().getResource("/Images/AdminGMAO.jpeg")));
     btnUtilisateur.setVerticalTextPosition(JButton.BOTTOM);
     btnUtilisateur.setHorizontalTextPosition(JButton.CENTER);
     btnUtilisateur.addActionListener(new ActionListener() {
