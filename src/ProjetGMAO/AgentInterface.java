@@ -11,9 +11,9 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class AgentInterface {
-	
-	private JFrame frame;
-	private JTextField txtIdentifiant;
+
+    private JFrame frame;
+    private JTextField txtIdentifiant;
     private JPasswordField txtMotDePasse;
     private JLabel lblIdentifiant;
     private JLabel lblMotDePasse;
@@ -22,19 +22,20 @@ public class AgentInterface {
     private JButton btnModifMaint;
     private JButton btnModifDevi;
     private JButton btnConsulte;
-	
-	//public static void main(String[] args) {
-       // EventQueue.invokeLater(new Runnable() {
-           // public void run() {
-                //try {
-                 //   AgentInterface agt = new AgentInterface();
-               //     agt.frame.setVisible(true);
-             //   } catch (Exception e) {
-           //         e.printStackTrace();
-         //       }
-       //     }
-     //   });
-   // }
+    private JButton btnCreerCompte;
+
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                try {
+                    AgentInterface agt = new AgentInterface();
+                    agt.frame.setVisible(true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
 
     /**
      * Create the application.
@@ -55,9 +56,8 @@ public class AgentInterface {
         JLabel lblAdmin = new JLabel("Bienvenue, Opérateur");
         lblAdmin.setBounds(140, 50, 200, 15);
         frame.getContentPane().add(lblAdmin);
-        
-        
-     // Label Identifiant
+
+        // Label Identifiant
         lblIdentifiant = new JLabel("Identifiant :");
         lblIdentifiant.setBounds(100, 80, 100, 30);
         frame.getContentPane().add(lblIdentifiant);
@@ -78,36 +78,35 @@ public class AgentInterface {
         txtMotDePasse.setBounds(200, 130, 200, 30);
         frame.getContentPane().add(txtMotDePasse);
         txtMotDePasse.setColumns(10);
-     // Button Connexion
+
+        // Button Connexion
         btnConnexion = new JButton("Connexion");
         btnConnexion.setBounds(200, 180, 200, 30);
         frame.getContentPane().add(btnConnexion);
-        
-        
+
         btnConnexion.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            	
-            	showOpOperations();
+                showOpOperations();
             }
         });
-        
-        
-        
 
+        // Button Créer un compte
+        btnCreerCompte = new JButton("Créer un compte");
+        btnCreerCompte.setBounds(200, 220, 200, 30);
+        frame.getContentPane().add(btnCreerCompte);
 
-    //    JButton btnManageUsers = new JButton("Gérer les utilisateurs");
-      //  btnManageUsers.setBounds(140, 100, 160, 25);
-      //  frame.getContentPane().add(btnManageUsers);
+        btnCreerCompte.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CreationCompteFenetre creationCompteFenetre = new CreationCompteFenetre();
+                creationCompteFenetre.frame.setVisible(true); 
+                frame.dispose();
+            }
+        });
 
-        //JButton btnViewReports = new JButton("Voir les rapports");
-       // btnViewReports.setBounds(140, 140, 160, 25);
-       // frame.getContentPane().add(btnViewReports);
-        
-        
         JButton btnRetour = new JButton("Retour");
         btnRetour.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-            	InterfaceHM window = new InterfaceHM();
+                InterfaceHM window = new InterfaceHM();
                 window.main(null);
                 frame.dispose();
             }
@@ -115,7 +114,7 @@ public class AgentInterface {
         btnRetour.setBounds(10, 10, 85, 21);
         frame.getContentPane().add(btnRetour);
     }
-    
+
     private void showOpOperations() {
         // Masquer les champs d'identifiant et de mot de passe, et le bouton de connexion
         lblIdentifiant.setVisible(false);
@@ -123,24 +122,21 @@ public class AgentInterface {
         lblMotDePasse.setVisible(false);
         txtMotDePasse.setVisible(false);
         btnConnexion.setVisible(false);
-       // lblErreur.setVisible(false);
+        btnCreerCompte.setVisible(false);
+        // lblErreur.setVisible(false);
 
         // Afficher les boutons d'opérations
-        
-        
-        btnModifMaint=new JButton("Modifier un devis");
+        btnModifMaint = new JButton("Modifier un devis");
         btnModifMaint.setBounds(140, 220, 190, 25);
         frame.getContentPane().add(btnModifMaint);
-        
-        btnModifDevi=new JButton("Modifier une maintenance");
+
+        btnModifDevi = new JButton("Modifier une maintenance");
         btnModifDevi.setBounds(140, 260, 190, 25);
         frame.getContentPane().add(btnModifDevi);
-        
-        btnConsulte=new JButton("Consulter un devis");
+
+        btnConsulte = new JButton("Consulter un devis");
         btnConsulte.setBounds(140, 300, 190, 25);
         frame.getContentPane().add(btnConsulte);
-        
-        
 
         frame.revalidate();
         frame.repaint();
@@ -149,5 +145,4 @@ public class AgentInterface {
     public void setVisible(boolean visible) {
         frame.setVisible(visible);
     }
-
 }
