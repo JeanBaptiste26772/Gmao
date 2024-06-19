@@ -58,50 +58,50 @@ public class AgentInterface {
         frame.getContentPane().add(lblAdmin);
 
         // Label Identifiant
-        lblIdentifiant = new JLabel("Identifiant :");
-        lblIdentifiant.setBounds(100, 80, 100, 30);
-        frame.getContentPane().add(lblIdentifiant);
+    //    lblIdentifiant = new JLabel("Identifiant :");
+    //    lblIdentifiant.setBounds(100, 80, 100, 30);
+      //  frame.getContentPane().add(lblIdentifiant);
 
-        // TextField Identifiant
+   //     // TextField Identifiant
         txtIdentifiant = new JTextField();
-        txtIdentifiant.setBounds(200, 80, 200, 30);
-        frame.getContentPane().add(txtIdentifiant);
-        txtIdentifiant.setColumns(10);
+    //    txtIdentifiant.setBounds(200, 80, 200, 30);
+    //    frame.getContentPane().add(txtIdentifiant);
+    //    txtIdentifiant.setColumns(10);
 
         // Label Mot de Passe
-        lblMotDePasse = new JLabel("Mot de Passe :");
-        lblMotDePasse.setBounds(100, 130, 100, 30);
-        frame.getContentPane().add(lblMotDePasse);
+    //    lblMotDePasse = new JLabel("Mot de Passe :");
+    //    lblMotDePasse.setBounds(100, 130, 100, 30);
+    //    frame.getContentPane().add(lblMotDePasse);
 
         // PasswordField Mot de Passe
-        txtMotDePasse = new JPasswordField();
-        txtMotDePasse.setBounds(200, 130, 200, 30);
-        frame.getContentPane().add(txtMotDePasse);
-        txtMotDePasse.setColumns(10);
+   //     txtMotDePasse = new JPasswordField();
+   //     txtMotDePasse.setBounds(200, 130, 200, 30);
+   //     frame.getContentPane().add(txtMotDePasse);
+     //   txtMotDePasse.setColumns(10);
 
         // Button Connexion
-        btnConnexion = new JButton("Connexion");
-        btnConnexion.setBounds(200, 180, 200, 30);
-        frame.getContentPane().add(btnConnexion);
-
-        btnConnexion.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                showOpOperations();
-            }
-        });
+   //     btnConnexion = new JButton("Connexion");
+   //     btnConnexion.setBounds(200, 180, 200, 30);
+//        frame.getContentPane().add(btnConnexion);
+//
+  //  //    btnConnexion.addActionListener(new ActionListener() {
+    //        public void actionPerformed(ActionEvent e) {
+        //        showOpOperations();
+         //   }
+      //  });
 
         // Button Créer un compte
-        btnCreerCompte = new JButton("Créer un compte");
-        btnCreerCompte.setBounds(200, 220, 200, 30);
-        frame.getContentPane().add(btnCreerCompte);
+     //   btnCreerCompte = new JButton("Créer un compte");
+     //   btnCreerCompte.setBounds(200, 220, 200, 30);
+     //   frame.getContentPane().add(btnCreerCompte);
 
-        btnCreerCompte.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                CreationCompteFenetre creationCompteFenetre = new CreationCompteFenetre();
-                creationCompteFenetre.frame.setVisible(true); 
-                frame.dispose();
-            }
-        });
+    //    btnCreerCompte.addActionListener(new ActionListener() {
+     //       public void actionPerformed(ActionEvent e) {
+       //         CreationCompteFenetre creationCompteFenetre = new CreationCompteFenetre();
+         //       creationCompteFenetre.frame.setVisible(true); 
+           //     frame.dispose();
+        //    }
+      //  });
 
         JButton btnRetour = new JButton("Retour");
         btnRetour.addActionListener(new ActionListener() {
@@ -115,14 +115,14 @@ public class AgentInterface {
         frame.getContentPane().add(btnRetour);
     }
 
-    private void showOpOperations() {
+  //  private void showOpOperations() {
         // Masquer les champs d'identifiant et de mot de passe, et le bouton de connexion
-        lblIdentifiant.setVisible(false);
-        txtIdentifiant.setVisible(false);
-        lblMotDePasse.setVisible(false);
-        txtMotDePasse.setVisible(false);
-        btnConnexion.setVisible(false);
-        btnCreerCompte.setVisible(false);
+  //      lblIdentifiant.setVisible(false);
+  //      txtIdentifiant.setVisible(false);
+  //      lblMotDePasse.setVisible(false);
+  //      txtMotDePasse.setVisible(false);
+   //     btnConnexion.setVisible(false);
+     //   btnCreerCompte.setVisible(false);
         // lblErreur.setVisible(false);
 
         // Afficher les boutons d'opérations
@@ -140,9 +140,9 @@ public class AgentInterface {
 
         frame.revalidate();
         frame.repaint();
-    }
+  //  }
 
-    public void setVisible(boolean visible) {
+  //  public void setVisible(boolean visible) {
         frame.setVisible(visible);
     }
 }
